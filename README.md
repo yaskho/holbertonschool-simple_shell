@@ -16,7 +16,7 @@ This file contains the main loop of the shell, where user input is accepted, par
 
 This file contains a function that splits a string into an array of strings based on a specified delimiter.
 
-4.get_path.c:
+4.checking-path.c:
 
 This file contains a function that finds the full path of a given command.
 

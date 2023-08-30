@@ -1,36 +1,36 @@
-#include "simple_shell.h"
+#include "shell.h"
 /**
- *execution -function to execute
+ *execute_command - function to execute
  *@tokens: vector
- *@path: path of command
  *Return: the exit status
 */
-int execution(char **tokens, char *path)
+int execute_command(char **tokens)
 {
-    int status = 0;
-    pid_t pid;
-    pid = fork();
-    if (pid == 0)
-    {
-            if (execve(path, tokens, environ) == -1)
-            {
-                perror("execve");
-                exit(ERROR);
-            
-            }
-    }
-    else if (pid < 0)
-    {
-        perror("fork")
-        exit(ERROR)
-    }
-    else
-    {
-        wait(&status);
-        if (WIFEXITED(status))
-            status = WEXITSTATUS(status);
+	int status = 0;
 
-    }
-    
-    return (status);
+	pid_t pid;
+
+	pid = fork();
+
+	if (pid == 0)
+	{
+			if (execve(tokens[0], tokens, environ) == -1)
+			{
+				perror("execve");
+				free_d_p(tokens);
+				exit(1);
+
+			}
+	}
+	else if (pid < 0)
+	{
+		perror("fork");
+		exit(1);
+	}
+	else
+	{
+		wait(NULL);
+	}
+
+	return (status);
 }
