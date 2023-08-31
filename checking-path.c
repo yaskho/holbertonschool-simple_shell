@@ -10,15 +10,21 @@ char *check_path(char *command)
 	char *path = getenv("PATH");
 	char *path_token;
 	struct stat info;
+	char *final_path;
 
 	if (path == NULL)
 		return (NULL);
+	if (stat(command, &info) == 0)
+	{
+		strcpy(path, command);
+		return (path);
+	}
 
 	path_token = strtok(path, ":");
 
 	while (path_token != NULL)
 	{
-		char *final_path = malloc(strlen(path_token) + strlen(command) + 2);
+		final_path = malloc(strlen(path_token) + strlen(command) + 2);
 
 		if (final_path == NULL)
 			return (NULL);

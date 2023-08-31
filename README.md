@@ -1,9 +1,18 @@
-INTROCUDTION:
+
+<h1 align="center">
+    💡 _simple_shell project:
+<p align="center">
+    </p>
+
+![1_lqEaA1-6gGQhdLS3k8X0xw](https://user-images.githubusercontent.com/31927278/182706961-e087c64e-9d7b-40db-a931-67009dc34089.gif)
+
 A simple shell, often referred to as a command-line interpreter or CLI (Command Line Interface), is a basic command-line interface that allows users to interact with an operating system by typing text-based commands. It provides a way to communicate with the computer system using textual commands rather than graphical interfaces. The simple shell takes in user input, interprets the commands, executes them, and provides textual output as a response.
 
-CODE OVERVIEW:
-The code for the simple shell project is divided into multiple files, each with a specific purpose. Here is an overview of each file and its purpose:
 
+
+
+## CODE OVERVIEW:
+The code for the simple shell project is divided into multiple files, each with a specific purpose. Here is an overview of each file and its purpose:
 1.shell.h:
 
 This file contains the function prototypes and header files required for the project.
@@ -27,8 +36,7 @@ This file contains a function that executes a command.
 6.free.c:
 
 This file contains a function that frees an array of strings.
-
-FUNCTIONALITY:
+## FUNCTIONALITY
 The simple shell project implements the following functionality:
 
 1.Accept user input from the command line.
@@ -40,23 +48,24 @@ The simple shell project implements the following functionality:
 4.Handle the exit command.
 
 5.Print the environment variables.
-
-compilation and testing:
+## compilation and testing
+```{r mon_bloc, echo = FALSE, WARNING = TRUE}
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
-execute:
-./hsh
+```
 
-how we use shell:
+## execute
+./hsh
+## how we use shell
 shell display each time a command that we executed the comand that most user excute in shell:
 
-- ls	to list files and directory
-- cd	change directory
-- pwd	print working directory
-- cat	show you what we wrote in our file
-- env	print the environment variable
-- printenv	print the shell variable
-- exit	shell will end and it gonna exit
+|- ls        |to list files and directory            |
+| :--------- | ------------------------------------: |
+|- cd        | change directory                      |
+|- pwd       | print working directory               |
+|- cat       | show you what we wrote in our file    |
+|- env       | print the environment variable        |
+|- printenv  | print the shell variable              |
+|- exit      | shell will end and it gonna exit      |
 
-
-AUTHORS:
+## AUTHORS:
 YASSINE KHOUZAMI

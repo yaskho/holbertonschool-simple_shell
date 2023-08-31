@@ -32,24 +32,19 @@ int main(void)
 			}
 			else if (strcmp(args[0], "env") == 0)
 			{
+				free(line);
+				free_d_p(args);
 				_env();
 				continue;
 			}
 			else
 			{
-				if (strcmp(args[0], "/") == 0)
-				{
-					args[0] = check_path(args[0]);
-				}
-
+				args[0] = check_path(args[0]);
 				status = execute_command(args);
 			}
-
 		}
-
 		free(line);
 		free_d_p(args);
 	}
-
 	return (status);
 }

@@ -12,10 +12,10 @@ char *reading(void)
 	input_len = getline(&input, &bufsize, stdin);
 
 	if (feof(stdin))
-		{
-			free(input);
-			exit(0);
-		}
+	{
+		free(input);
+		exit(0);
+	}
 	if (input_len == -1)
 	{
 		perror("getline");
