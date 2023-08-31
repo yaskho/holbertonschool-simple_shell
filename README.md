@@ -28,10 +28,6 @@ This file contains a function that executes a command.
 
 This file contains a function that frees an array of strings.
 
-7.handle_exit_command.c:
-
-This file contains a function that handles the exit command.
-
 FUNCTIONALITY:
 The simple shell project implements the following functionality:
 
